@@ -1,0 +1,68 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/extensions": [
+      ".js",
+      ".jsx"
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "parser": "babel-eslint"
+  },
+  "plugins": ["react", "async-await", "react-hooks"],
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/prop-types": [1, { "ignore": ["children"] }],
+    "react/display-name": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/no-deprecated": "warn",
+    "quotes": ["error", "single"],
+    "async-await/space-after-async": 2,
+    "async-await/space-after-await": 2,
+    "arrow-spacing": "error",
+    "indent": ["warn", 2],
+    "semi": ["error", "always"],
+    "no-unused-vars": ["error", { "args": "after-used" }],
+    "semi-spacing": "error",
+    "no-multi-spaces": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "key-spacing": [
+      "error",
+      { "beforeColon": false, "afterColon": true, "mode": "strict" }
+    ],
+    "space-before-function-paren": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-console": [1, { "allow": ["warn"] }],
+    "space-infix-ops": "error",
+    "require-atomic-updates": 0
+  }
+}
